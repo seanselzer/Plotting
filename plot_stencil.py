@@ -9,7 +9,7 @@ Created on Wed Mar 25 10:09:49 2020
 import matplotlib.pyplot as plt
 import numpy as np
 
-def my_plotter(ax, data1, data2, param_dict):
+def my_plotter(ax, data1, data2, param_dict, y_lim_max, y_lim_min) :
     """
     A helper function to make a graph
 
@@ -33,6 +33,7 @@ def my_plotter(ax, data1, data2, param_dict):
         list of artists added
     """
     out = ax.plot(data1, data2, **param_dict)
+    ax.set_ylim(y_lim_max, y_lim_min)
     return out
 
 # which you would then use as:
@@ -43,4 +44,4 @@ my_plotter(ax, data1, data2, {'linestyle': '',
                               'marker': 'o',
                               'markerfacecolor' : 'teal',
                               'markeredgecolor' : 'black',
-                              'label':'Data1'})
+                              'label':'Data1'}, 3,-3)
