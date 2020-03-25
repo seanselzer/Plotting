@@ -35,7 +35,7 @@ for deployment in deployment_list:
                {'linestyle': '-',
                                   'marker': 'o',
                                   'markeredgecolor' : 'black',
-                                  'label':'Data1'},
+                                  'label':deployment},
                y_lim_max = rainbow_df.Depth.max()*1.05,
                y_lim_min = rainbow_df.Depth.min()*1.05)
                
@@ -76,7 +76,7 @@ for deployment in deployment_list:
                {'linestyle': '-',
                                   'marker': 'o',
                                   'markeredgecolor' : 'black',
-                                  'label':'Data1'},
+                                  'label':deployment},
                y_lim_max = tag_df.Depth.max()*1.05,
                y_lim_min = tag_df.Depth.min()*1.05)
                
